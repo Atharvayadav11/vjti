@@ -1,3 +1,4 @@
+import Chatbot from '@/components/Chatbot';
 import HeaderBox from '@/components/HeaderBox'
 import PaymentTransferForm from '@/components/PaymentTransferForm'
 import { getAccounts } from '@/lib/actions/bank.actions';
@@ -24,6 +25,7 @@ const Transfer = async () => {
       <section className="size-full pt-5">
         <PaymentTransferForm accounts={accountsData} />
       </section>
+      <Chatbot />
     </section>
   )
 }
