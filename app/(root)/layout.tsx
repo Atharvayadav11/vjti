@@ -3,6 +3,7 @@ import Sidebar from "@/components/Sidebar";
 import { getLoggedInUser } from "@/lib/actions/user.actions";
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import { TTSProvider } from "@/components/TextToSpeech";
 
 export default async function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default async function RootLayout({
   if(!loggedIn) redirect('/sign-in')
 
   return (
+    <TTSProvider>
     <main className="flex h-screen w-full font-inter">
       <Sidebar user={loggedIn} />
 
@@ -27,5 +29,6 @@ export default async function RootLayout({
         {children}
       </div>
     </main>
+    </TTSProvider>
   );
 }

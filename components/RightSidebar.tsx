@@ -4,13 +4,16 @@ import React from 'react'
 import BankCard from './BankCard'
 import { countTransactionCategories } from '@/lib/utils'
 import Category from './Category'
+import TextToSpeech from './TextToSpeech'
 
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
   const categories: CategoryCount[] = countTransactionCategories(transactions);
 
   return (
+
     <aside className="right-sidebar">
       <section className="flex flex-col pb-8">
+        <TextToSpeech>
         <div className="profile-banner" />
         <div className="profile">
           <div className="profile-img">
@@ -26,6 +29,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
             </p>
           </div>
         </div>
+        </TextToSpeech>
       </section>
 
       <section className="banks">

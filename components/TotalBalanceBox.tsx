@@ -1,10 +1,11 @@
 import AnimatedCounter from './AnimatedCounter';
 import DoughnutChart from './DoughnutChart';
-
+import TextToSpeech from './TextToSpeech';
 const TotalBalanceBox = ({
   accounts = [], totalBanks, totalCurrentBalance
 }: TotalBalanceBoxProps) => {
   return (
+    <TextToSpeech>
     <section className="total-balance">
       <div className="total-balance-chart">
         <DoughnutChart accounts={accounts} />
@@ -25,6 +26,7 @@ const TotalBalanceBox = ({
         </div>
       </div>
     </section>
+    </TextToSpeech>
   )
 }
 

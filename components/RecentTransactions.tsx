@@ -4,6 +4,7 @@ import { BankTabItem } from './BankTabItem'
 import BankInfo from './BankInfo'
 import TransactionsTable from './TransactionsTable'
 import { Pagination } from './Pagination'
+import TextToSpeech from './TextToSpeech'
 
 const RecentTransactions = ({
   accounts,
@@ -24,13 +25,19 @@ const RecentTransactions = ({
   return (
     <section className="recent-transactions">
       <header className="flex items-center justify-between">
+        <TextToSpeech>
+          <div>
         <h2 className="recent-transactions-label">Recent transactions</h2>
-        <Link
+        </div>
+        </TextToSpeech>
+        <TextToSpeech>
+          <div><Link
           href={`/transaction-history/?id=${appwriteItemId}`}
           className="view-all-btn"
         >
           View all
-        </Link>
+        </Link></div>
+        </TextToSpeech>
       </header>
 
       <Tabs defaultValue={appwriteItemId} className="w-full">
