@@ -1,0 +1,22 @@
+#AIbutton {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  z-index: 100;
+}
+.output-div{
+  position: fixed;
+ bottom: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 50%;
+ height: 100px;
+ overflow-y: scroll;
+ text-align: center;
+ background-color: rgba(0, 0, 0, 0.198);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 25px;
+}

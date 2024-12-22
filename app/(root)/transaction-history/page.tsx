@@ -1,3 +1,4 @@
+import Chatbot from '@/components/Chatbot';
 import HeaderBox from '@/components/HeaderBox'
 import { Pagination } from '@/components/Pagination';
 import TransactionsTable from '@/components/TransactionsTable';
@@ -67,6 +68,7 @@ const currentTransactions = account?.transactions.slice(
               </div>
             )}
         </section>
+        <Chatbot />
       </div>
     </div>
   )
